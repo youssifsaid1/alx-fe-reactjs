@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import UserContext from './UserContext';
 
 function UserDetails() {
+  // نجيب البيانات من Context
   const userData = useContext(UserContext);
 
   return (
