@@ -3,21 +3,35 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-// استدعاء الكومبوننت الجديد
+// ✅ استدعاء الكومبوننتس
+import Header from './components/Header'
+import MainContent from './components/MainContent'
+import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
+import WelcomeMessage from './components/WelcomeMessage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      {/* ✅ عرض الكومبوننت مع props */}
+      {/* ✅ Header */}
+      <Header />
+
+      {/* ✅ Main Content */}
+      <MainContent />
+
+      {/* ✅ User Profile */}
       <UserProfile 
         name="Alice" 
         age="25" 
         bio="Loves hiking and photography" 
       />
 
+      {/* ✅ Welcome Message */}
+      <WelcomeMessage />
+
+      {/* ✅ باقي الكود التجريبي بتاع Vite */}
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -39,6 +53,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* ✅ Footer */}
+      <Footer />
     </div>
   )
 }
