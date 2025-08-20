@@ -9,10 +9,17 @@ import MainContent from './components/MainContent'
 import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
 import WelcomeMessage from './components/WelcomeMessage'
-import Counter from './components/Counter'   // ✅ الكومبوننت الجديد
+import Counter from './components/Counter'
+
+// ✅ استدعاء الـ Context
+import ProfilePage from './ProfilePage'
+import UserContext from './UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // ✅ بيانات المستخدم اللي هتتبعت عن طريق Context
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" }
 
   return (
     <div className="App">
@@ -22,7 +29,7 @@ function App() {
       {/* ✅ Main Content */}
       <MainContent />
 
-      {/* ✅ User Profile */}
+      {/* ✅ User Profile (props عادي) */}
       <UserProfile 
         name="Alice" 
         age="25" 
@@ -35,7 +42,7 @@ function App() {
       {/* ✅ Welcome Message */}
       <WelcomeMessage />
 
-      {/* ✅ باقي الكود التجريبي بتاع Vite */}
+      {/* ✅ مثال على Vite */}
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -57,6 +64,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* ✅ تجربة الـ Context: هنغلف ProfilePage */}
+      <UserContext.Provider value={userData}>
+        <ProfilePage />
+      </UserContext.Provider>
 
       {/* ✅ Footer */}
       <Footer />
