@@ -3,9 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import UserContext from './UserContext';
-import UserProfile from './components/UserProfile';
-
 // ✅ استدعاء الكومبوننتس
 import Header from './components/Header'
 import MainContent from './components/MainContent'
@@ -14,7 +11,7 @@ import UserProfile from './components/UserProfile'
 import WelcomeMessage from './components/WelcomeMessage'
 import Counter from './components/Counter'
 
-// ✅ استدعاء الـ Context
+// ✅ استدعاء الـ Context والكومبوننت الخاص بيه
 import ProfilePage from './ProfilePage'
 import UserContext from './UserContext'
 
