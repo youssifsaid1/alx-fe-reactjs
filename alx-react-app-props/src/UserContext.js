@@ -1,6 +1,6 @@
-import { createContext } from 'react';
+// src/UserContext.js
+import { createContext } from "react";
 
-// إنشاء Context جديد
 const UserContext = createContext();
 
 export default UserContext;

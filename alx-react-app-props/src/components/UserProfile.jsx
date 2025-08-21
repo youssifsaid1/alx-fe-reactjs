@@ -1,16 +1,11 @@
-import { useContext } from "react";
-import UserContext from "../UserContext";
-
-function UserProfile() {
-  // ✅ استدعاء البيانات من الـ Context بدل props
-  const userData = useContext(UserContext);
-
+function UserProfile(props) {
   return (
-    <div>
-      <h2>{userData.name}</h2>
-      <p>Email: {userData.email}</p>
+    <div className="user-profile">
+      <h2>{props.name}</h2>
+      <p>Age: {props.age}</p>
+      <p>Bio: {props.bio}</p>
     </div>
-  );
+  )
 }
 
 export default UserProfile;
